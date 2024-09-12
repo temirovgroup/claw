@@ -1,0 +1,24 @@
+<IfModule mod_rewrite.c>
+    Options +FollowSymlinks
+    RewriteEngine On
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteCond %{REQUEST_URI} ^/(admin)
+    RewriteRule ^admin/assets/(.*)$ backend/web/assets/$1 [L]
+    RewriteRule ^admin/lte/(.*)$ backend/web/lte/$1 [L]
+    RewriteRule ^admin/images/(.*)$ backend/web/images/$1 [L]
+    RewriteCond %{REQUEST_URI} !^/backend/web/(assets|lte)/
+    RewriteCond %{REQUEST_URI} ^/(admin)
+    RewriteRule ^.*$ backend/web/index.php [L]
+    RewriteCond %{REQUEST_URI} ^/(assets|front|images)
+    RewriteRule ^assets/(.*)$ frontend/web/assets/$1 [L]
+    RewriteRule ^front/(.*)$ frontend/web/front/$1 [L]
+    RewriteRule ^images/(.*)$ frontend/web/images/$1 [L]
+    RewriteRule ^(.*)$ frontend/web/$1 [L]
+    RewriteCond %{REQUEST_URI} !^/(frontend|backend)/web/(assets|front)/
+    RewriteCond %{REQUEST_URI} !index.php
+    RewriteCond %{REQUEST_FILENAME} !-f [OR]
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^.*$ frontend/web/index.php
+</IfModule>

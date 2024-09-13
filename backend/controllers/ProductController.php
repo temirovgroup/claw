@@ -42,9 +42,19 @@ class ProductController extends Controller
         return [
             'images-get' => [
                 'class' => 'vova07\imperavi\actions\GetImagesAction',
-                'url' => Url::to(['/images/'], true), // Directory URL address, where files are stored.
+                'url' => Url::to(['/images/editor'], true), // Directory URL address, where files are stored.
                 'path' => '@webroot/images/editor', // Or absolute path to directory where files are stored.
                 'options' => ['only' => ['*.jpg', '*.jpeg', '*.png', '*.gif', '*.ico']], // These options are by default.
+            ],
+            'image-upload' => [
+                'class' => 'vova07\imperavi\actions\UploadFileAction',
+                'url' => Url::to(['/images/editor'], true), // Directory URL address, where files are stored.
+                'path' => '@webroot/images/editor', // Or absolute path to directory where files are stored.
+            ],
+            'file-delete' => [
+                'class' => 'vova07\imperavi\actions\DeleteFileAction',
+                'url' => Url::to(['/images/editor'], true), // Directory URL address, where files are stored.
+                'path' => '@webroot/images/editor', // Or absolute path to directory where files are stored.
             ],
         ];
     }

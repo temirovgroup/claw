@@ -45,3 +45,4 @@ phpunit.phar
 /backend/web/images/cache
 /backend/web/images/store
 /backend/web/images/uploads
+/backend/web/images/editor

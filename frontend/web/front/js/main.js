@@ -17,7 +17,9 @@
     /*--
         Product Details Zoom Activation
     -----------------------------------*/
-    $('.zoom').zoom();
+    if ($(window).width() > 1000) {
+        $('.zoom').zoom();
+    }
 
 
     /*--

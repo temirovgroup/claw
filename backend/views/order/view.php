@@ -30,6 +30,8 @@ $orderSum = array_sum(\yii\helpers\ArrayHelper::getColumn($orderItems, 'sum'));
                 <br>
                 Телефон: <a href="tel:+<?= $order->phone ?>"><?= \common\helpers\CollectorHelper::formatPhone($order->phone) ?></a>
                 <br>
+                Адрес: <?= $order->getAddress() ?>
+                <br>
             </div>
             <div class="col-sm-6">
                 <h3>Стоимость заказа: <?= \common\helpers\CollectorHelper::numFormat($orderSum) ?> &#8381;</h3>

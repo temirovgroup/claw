@@ -16,6 +16,8 @@ use Yii;
  * @property int $phone Телефон
  * @property string $email Email
  * @property string|null $note Примечание к заказу
+ * @property string $patronymic Отчество
+ * @property string $address Адрес с индексом
  */
 class Order extends \yii\db\ActiveRecord
 {
@@ -46,7 +48,7 @@ class Order extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['created_at', 'uin', 'name', 'last_name', 'phone', 'email'], 'required'],
+            [['created_at', 'uin', 'name', 'last_name', 'phone', 'email', 'patronymic', 'address'], 'required'],
             [['created_at', 'uin'], 'integer'],
             [['note'], 'string'],
             [['name', 'last_name', 'email'], 'string', 'max' => 255],
@@ -75,6 +77,8 @@ class Order extends \yii\db\ActiveRecord
             'phone' => 'Телефон',
             'email' => 'Email',
             'note' => 'Примечание к заказу',
+            'patronymic' => 'Отчество',
+            'address' => 'Адрес с индексом',
         ];
     }
 
@@ -93,6 +97,22 @@ class Order extends \yii\db\ActiveRecord
      */
     public function getFullName($delimmer = ' '): string
     {
-        return $this->name . $delimmer . $this->last_name;
+        return $this->name . $delimmer . $this->last_name . $delimmer . $this->patronymic;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getNote(): ?string
+    {
+        return $this->note;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAddress(): string
+    {
+        return $this->address;
     }
 }

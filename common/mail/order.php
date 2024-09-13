@@ -24,13 +24,17 @@ use yii\helpers\Url;
     <tr>
         <td style="border: 1px solid #9e9e9e; padding: 10px;"><?= $order->getCreateDate() ?></td>
         <td style="border: 1px solid #9e9e9e; padding: 10px;"><?= $order->uin ?></td>
-        <td style="border: 1px solid #9e9e9e; padding: 10px;"><?= $order->name ?> <?= $order->last_name ?> <br> <?= $order->email ?></td>
+        <td style="border: 1px solid #9e9e9e; padding: 10px;"><?= $order->getFullName() ?> <br> <?= $order->email ?></td>
     </tr>
     </tbody>
     <tfoot>
     <tr>
+        <th style="border: 1px solid #9e9e9e; padding: 10px;">Адрес</th>
+        <th colspan="2" style="border: 1px solid #9e9e9e; padding: 10px;"><?= $order->getAddress() ?></th>
+    </tr>
+    <tr>
         <th style="border: 1px solid #9e9e9e; padding: 10px;">Примечание</th>
-        <th colspan="2" style="border: 1px solid #9e9e9e; padding: 10px;"><?= $order->note ?></th>
+        <th colspan="2" style="border: 1px solid #9e9e9e; padding: 10px;"><?= $order->getNote() ?></th>
     </tr>
     </tfoot>
 </table>

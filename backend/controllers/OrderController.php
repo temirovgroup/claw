@@ -16,7 +16,9 @@ class OrderController extends Controller
      */
     public function actionIndex()
     {
-        $orders = Order::find()->all();
+        $orders = Order::find()
+            ->orderBy('created_at DESC')
+            ->all();
 
         return $this->render('index', [
             'orders' => $orders,

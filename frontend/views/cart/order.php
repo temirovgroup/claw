@@ -55,6 +55,24 @@ $this->title = 'Оформление заказа | CLAW';
                         </div>
                         <div class="col-sm-6">
                             <div class="single-form">
+                                <?= $form->field($model, 'patronymic')
+                                    ->textInput(['placeholder' => 'Отчество'])
+                                    ->label(false)
+                                    ->error(false)
+                                ?>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="single-form">
+                                <?= $form->field($model, 'address')
+                                    ->textInput(['placeholder' => 'Адрес с индексом'])
+                                    ->label(false)
+                                    ->error(false)
+                                ?>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="single-form">
                                 <?= $form->field($model, 'phone')
                                     ->widget(\yii\widgets\MaskedInput::class, [
                                         'mask' => '+7 (999) 999-99-99',

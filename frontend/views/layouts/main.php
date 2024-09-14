@@ -39,7 +39,7 @@ AppAsset::register($this);
                 <div class="col-lg-3">
                     <!-- Header Logo Start -->
                     <div class="header-logo">
-                        <a href="<?= \yii\helpers\Url::to(['/']) ?>"><img src="/front/images/logo.jpg" alt="Logo"></a>
+                        <a href="<?= \yii\helpers\Url::to(['/']) ?>"><img src="/front/images/logo.png" alt="Logo"></a>
                     </div>
                     <!-- Header Logo End -->
                 </div>
@@ -72,8 +72,9 @@ AppAsset::register($this);
 
                         <!-- Header Logo Start -->
                         <div class="header-logo text-center">
-                            <a href="<?= \yii\helpers\Url::to(['/']) ?>"><img src="/front/images/logo.jpg"
-                                                                              alt="Logo"></a>
+                            <a href="<?= \yii\helpers\Url::to(['/']) ?>">
+                                <img src="/front/images/logo.png" alt="CLAW">
+                            </a>
                         </div>
                         <!-- Header Logo End -->
 
@@ -83,9 +84,9 @@ AppAsset::register($this);
 
                         <!-- Header Action Start -->
                         <div class="header-meta">
-                            <a class="action" href="cart.html">
+                            <a class="action" href="<?= \yii\helpers\Url::to(['cart/index']) ?>">
                                 <i class="pe-7s-shopbag"></i>
-                                <span class="number">3</span>
+                                <span class="number"><?= \frontend\helpers\CartHelper::getCartCount() ?></span>
                             </a>
                         </div>
                         <!-- Header Action End -->
@@ -117,7 +118,7 @@ AppAsset::register($this);
 
                         <!-- Footer Logo Start -->
                         <div class="footer-logo">
-                            <a href="<?= \yii\helpers\Url::to(['/']) ?>"><img src="/front/images/logo.jpg"
+                            <a href="<?= \yii\helpers\Url::to(['/']) ?>"><img src="/front/images/logo.png"
                                                                               alt="Logo"></a>
                         </div>
                         <!-- Footer Logo End -->

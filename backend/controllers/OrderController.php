@@ -7,9 +7,8 @@ namespace backend\controllers;
 
 use common\models\Order;
 use common\models\OrderItem;
-use yii\web\Controller;
 
-class OrderController extends Controller
+class OrderController extends AppController
 {
     /**
      * @return string

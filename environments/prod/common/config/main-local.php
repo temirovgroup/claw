@@ -6,9 +6,9 @@ return [
     'components' => [
         'db' => [
             'class' => \yii\db\Connection::class,
-            'dsn' => 'mysql:host=localhost;dbname=tgroup_bybusines',
-            'username' => 'tgroup_bybusines',
-            'password' => '2RI!t7bwszR4',
+            'dsn' => 'mysql:host=localhost;dbname=tgroup_clawtools',
+            'username' => 'tgroup_clawtools',
+            'password' => 'c*kMI5P6UX&f',
             'charset' => 'utf8',
         ],
         'mailer' => [

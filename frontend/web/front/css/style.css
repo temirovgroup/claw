@@ -19290,7 +19290,7 @@ blockquote .blockquote-name::before {
 /*  4.1 - Slider CSS
 /*----------------------------------------*/
 .slider-section {
-    background-color: #e9e1f7;
+    background-color: #f1f1f1;
     position: relative;
     overflow: hidden;
 }

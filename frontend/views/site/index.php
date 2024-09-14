@@ -232,8 +232,8 @@ use yii\helpers\Url;
                 <!-- Single Benefit Start -->
                 <div class="single-benefit">
                     <img src="/front/images/icon/icon-1.png" alt="Icon">
-                    <h3 class="title">Бесплатная <br> доставка</h3>
-                    <p>Отправка почтой, сдэк в любой регион России!</p>
+                    <h3 class="title">Доставка по <br> всей России</h3>
+                    <p>Отправка в любой регион России и другие страны.</p>
                 </div>
                 <!-- Single Benefit End -->
 

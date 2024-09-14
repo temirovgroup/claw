@@ -5,16 +5,15 @@ namespace backend\controllers;
 use common\models\Category;
 use common\models\Product;
 use yii\data\ActiveDataProvider;
-use yii\helpers\Url;
-use yii\web\Controller;
-use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\Url;
+use yii\web\NotFoundHttpException;
 use yii\web\UploadedFile;
 
 /**
  * ProductController implements the CRUD actions for Product model.
  */
-class ProductController extends Controller
+class ProductController extends AppController
 {
     /**
      * @inheritDoc

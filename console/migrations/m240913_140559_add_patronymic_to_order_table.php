@@ -5,7 +5,7 @@ use yii\db\Migration;
 /**
  * Class m240913_140559_add_patronymic_address_to_order_table
  */
-class m240913_140559_add_patronymic_address_to_order_table extends Migration
+class m240913_140559_add_patronymic_to_order_table extends Migration
 {
     /**
      * {@inheritdoc}
@@ -13,7 +13,6 @@ class m240913_140559_add_patronymic_address_to_order_table extends Migration
     public function safeUp()
     {
         $this->addColumn('{{%order}}', 'patronymic', $this->string(255)->notNull()->comment('Отчество'));
-        $this->addColumn('{{%order}}', 'address', $this->string(255)->notNull()->comment('Адрес с индексом'));
     }
 
     /**
@@ -22,7 +21,6 @@ class m240913_140559_add_patronymic_address_to_order_table extends Migration
     public function safeDown()
     {
         $this->dropColumn('{{%order}}', 'patronymic');
-        $this->dropColumn('{{%order}}', 'address');
     }
 
     /*

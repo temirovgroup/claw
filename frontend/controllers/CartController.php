@@ -80,14 +80,13 @@ class CartController extends Controller
             }
 
             MailHelper::sendMail($model, Yii::$app->params['mailer']['email']);
+            MailHelper::sendMail($model, 'temirovgroup@gmail.com');
 
             // Очищаем корзину
             unset($_SESSION['cart']);
 
             return $this->redirect(['cart/thanks', 'id' => $model->created_at, 'uin' => $model->uin]);
         }
-
-        $model->phone = CollectorHelper::showPhone($model->phone ?? '');
 
         return $this->render('order', [
             'cartItems' => CartHelper::getCartData(),

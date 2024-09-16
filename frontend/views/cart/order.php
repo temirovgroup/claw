@@ -40,7 +40,6 @@ $this->title = 'Оформление заказа | CLAW';
                                 <?= $form->field($model, 'name')
                                     ->textInput(['placeholder' => 'Имя'])
                                     ->label(false)
-                                    ->error(false)
                                 ?>
                             </div>
                         </div>
@@ -49,7 +48,6 @@ $this->title = 'Оформление заказа | CLAW';
                                 <?= $form->field($model, 'last_name')
                                     ->textInput(['placeholder' => 'Фамилия'])
                                     ->label(false)
-                                    ->error(false)
                                 ?>
                             </div>
                         </div>
@@ -58,34 +56,6 @@ $this->title = 'Оформление заказа | CLAW';
                                 <?= $form->field($model, 'patronymic')
                                     ->textInput(['placeholder' => 'Отчество'])
                                     ->label(false)
-                                    ->error(false)
-                                ?>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="single-form">
-                                <?= $form->field($model, 'address')
-                                    ->textInput(['placeholder' => 'Адрес с индексом'])
-                                    ->label(false)
-                                    ->error(false)
-                                ?>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="single-form">
-                                <?= $form->field($model, 'phone')
-                                    ->widget(\yii\widgets\MaskedInput::class, [
-                                        'mask' => '+7 (999) 999-99-99',
-                                        'options' => [
-                                            'class' => 'form-control',
-                                            'placeholder' => 'Телефон',
-                                        ],
-                                        'clientOptions' => [
-                                            'clearIncomplete' => true,
-                                        ],
-                                    ])
-                                    ->label(false)
-                                    ->error(false)
                                 ?>
                             </div>
                         </div>
@@ -94,14 +64,16 @@ $this->title = 'Оформление заказа | CLAW';
                                 <?= $form->field($model, 'email')
                                     ->textInput(['placeholder' => 'Email'])
                                     ->label(false)
-                                    ->error(false)
                                 ?>
                             </div>
                         </div>
                     </div>
 
                     <div class="single-form checkout-note">
-                        <?= $form->field($model, 'note')->textarea(['placeholder' => 'Укажите Ваши пожелания и примечания к заказу'])->error(false) ?>
+                        <?= $form->field($model, 'note')
+                            ->textarea(['placeholder' => 'Укажите Ваши пожелания и примечания к заказу'])
+                            ->error(false)
+                        ?>
                     </div>
                 </div>
                 <!-- Checkout Form End -->
@@ -143,8 +115,9 @@ $this->title = 'Оформление заказа | CLAW';
                                     <p>Сумма заказа</p>
                                 </td>
                                 <td class="total-price">
-                                    <p><?= \common\helpers\CollectorHelper::numFormat($cartItems['cartSum']) ?>
-                                        &#8381;</p>
+                                    <p>
+                                        <?= \common\helpers\CollectorHelper::numFormat($cartItems['cartSum']) ?>&#8381;
+                                    </p>
                                 </td>
                             </tr>
                             </tfoot>

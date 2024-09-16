@@ -26,7 +26,7 @@ AppAsset::register($this);
         <title><?= Html::encode($this->title) ?></title>
 
         <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="/front/images/favicon.jpg">
+        <link rel="shortcut icon" type="image/x-icon" href="/front/images/favicon.png">
 
         <?php $this->head() ?>
     </head>

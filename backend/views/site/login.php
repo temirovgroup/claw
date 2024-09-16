@@ -24,7 +24,7 @@ $this->title = 'Авторизация';
             <?= $form->field($model, 'rememberMe')->checkbox() ?>
 
             <div class="form-group">
-                <?= Html::submitButton('Login', ['class' => 'btn btn-primary btn-block', 'name' => 'login-button']) ?>
+                <?= Html::submitButton('Войти', ['class' => 'btn btn-primary btn-block', 'name' => 'login-button']) ?>
             </div>
 
         <?php ActiveForm::end(); ?>

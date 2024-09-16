@@ -62,6 +62,16 @@ return [
                     'route' => 'site/index',
                     'suffix' => '',
                 ],
+                /*[
+                    'pattern' => 'login',
+                    'route' => 'site/login',
+                    'suffix' => '',
+                ],*/
+                /*[
+                    'pattern' => 'signup',
+                    'route' => 'site/signup',
+                    'suffix' => '',
+                ],*/
                 [
                     'pattern' => 'sitemap',
                     'route' => 'sitemap/index',

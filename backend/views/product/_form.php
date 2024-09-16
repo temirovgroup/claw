@@ -58,10 +58,12 @@ use yii\widgets\ActiveForm;
         'settings' => [
             'lang' => 'ru',
             'minHeight' => 200,
-            'imageUpload' => Url::to(['images/editor/image-upload']),
-            'imageManagerJson' => Url::to(['/images/editor/images-get']),
+            'imageUpload' => Url::to(['product/image-upload']),
+            'imageManagerJson' => Url::to(['product/images-get']),
+            'imageDelete' => Url::to(['product/file-delete']),
             'plugins' => [
                 'imagemanager',
+                'video',
             ],
         ],
     ]) ?>
@@ -70,10 +72,12 @@ use yii\widgets\ActiveForm;
         'settings' => [
             'lang' => 'ru',
             'minHeight' => 200,
-            'imageUpload' => Url::to(['images/editor/image-upload']),
-            'imageManagerJson' => Url::to(['/images/editor/images-get']),
+            'imageUpload' => Url::to(['product/image-upload']),
+            'imageManagerJson' => Url::to(['product/images-get']),
+            'imageDelete' => Url::to(['product/file-delete']),
             'plugins' => [
                 'imagemanager',
+                'video',
             ],
         ],
     ]) ?>

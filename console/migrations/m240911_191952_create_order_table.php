@@ -24,7 +24,6 @@ class m240911_191952_create_order_table extends Migration
             'uin' => $this->integer()->notNull()->comment('Номер заказа'),
             'name' => $this->string(255)->notNull()->comment('Имя'),
             'last_name' => $this->string(255)->notNull()->comment('Фамилия'),
-            'phone' => $this->bigInteger(11)->notNull()->comment('Телефон'),
             'email' => $this->string(255)->notNull()->comment('Email'),
             'note' => $this->text()->comment('Примечание к заказу'),
         ], $tableOptions);

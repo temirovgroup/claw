@@ -2,8 +2,8 @@
 
 return [
     'mailer' => [
-        'host' => 'smtp.yandex.ru',
-        'email' => 'temirovgroup@yandex.ru',
-        'pass' => 'sizkihograruhrhp',
+        'host' => 'smtp.beget.com',
+        'email' => 'order@clawtools.ru',
+        'pass' => '&AgsqFocB8SQ',
     ],
 ];

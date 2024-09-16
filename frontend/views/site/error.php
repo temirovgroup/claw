@@ -9,19 +9,25 @@ use yii\helpers\Html;
 
 $this->title = $name;
 ?>
-<div class="site-error">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+<div class="section section-padding-02 mb-10 pb-10">
+    <div class="container">
 
-    <div class="alert alert-danger">
-        <?= nl2br(Html::encode($message)) ?>
+        <!-- History content End -->
+        <div class="history-content text-center mt-10 mb-10 pb-10">
+
+            <div class="section-title-03">
+                <h2 class="title"><?= Html::encode($this->title) ?></h2>
+            </div>
+
+            <div class="checkout-info mt-30">
+                <div class="info-header error">
+                    <?= nl2br(Html::encode($message)) ?>
+                </div>
+            </div>
+
+        </div>
+        <!-- History content End -->
+
     </div>
-
-    <p>
-        The above error occurred while the Web server was processing your request.
-    </p>
-    <p>
-        Please contact us if you think this is a server error. Thank you.
-    </p>
-
 </div>

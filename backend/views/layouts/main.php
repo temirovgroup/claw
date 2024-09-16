@@ -24,6 +24,8 @@ AppAsset::register($this);
         <?php $this->registerCsrfMetaTags() ?>
         <title><?= Html::encode($this->title) ?></title>
 
+        <link rel="shortcut icon" type="image/x-icon" href="/front/images/favicon.png">
+
         <?php $this->head() ?>
     </head>
     <body>

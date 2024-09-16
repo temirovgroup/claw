@@ -7,16 +7,17 @@ namespace backend\controllers;
 
 use common\models\Order;
 use common\models\OrderItem;
-use yii\web\Controller;
 
-class OrderController extends Controller
+class OrderController extends AppController
 {
     /**
      * @return string
      */
     public function actionIndex()
     {
-        $orders = Order::find()->all();
+        $orders = Order::find()
+            ->orderBy('created_at DESC')
+            ->all();
 
         return $this->render('index', [
             'orders' => $orders,

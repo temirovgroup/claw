@@ -38,9 +38,7 @@ $this->title = 'Заказы';
                             <td><?= $data->getCreateDate() ?></td>
                             <td><?= $data->getFullName() ?></td>
                             <td>
-                                <a href="mailto:<?= $data->email ?>"><?= $data->email ?></a>
-                                <br>
-                                <a href="tel:+<?= $data->phone ?>"><?= \common\helpers\CollectorHelper::formatPhone($data->phone) ?></a>
+                                <a href="mailto:<?= $data->getEmail() ?>"><?= $data->getEmail() ?></a>
                             </td>
                             <td>
                                 <a href="<?= Url::to(['order/view', 'id' => $data->id]) ?>" class="btn btn-success">

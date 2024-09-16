@@ -4,14 +4,13 @@ namespace backend\controllers;
 
 use common\models\Category;
 use yii\data\ActiveDataProvider;
-use yii\web\Controller;
-use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\NotFoundHttpException;
 
 /**
  * CategoryController implements the CRUD actions for Category model.
  */
-class CategoryController extends Controller
+class CategoryController extends AppController
 {
     /**
      * @inheritDoc

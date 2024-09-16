@@ -17,7 +17,9 @@
     /*--
         Product Details Zoom Activation
     -----------------------------------*/
-    $('.zoom').zoom();
+    if ($(window).width() > 1000) {
+        $('.zoom').zoom();
+    }
 
 
     /*--
@@ -122,6 +124,34 @@
     });
 
 
+
+
+    /*--
+        Product 02
+    -----------------------------------*/
+    var product = new Swiper('.product-active-02 .swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: false,
+        navigation: {
+            nextEl: '.product-active-02 .swiper-button-next',
+            prevEl: '.product-active-02 .swiper-button-prev',
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            576: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 3,
+            }
+        }
+    });
 
 
     /*--

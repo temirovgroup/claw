@@ -57,7 +57,7 @@ $this->title = 'Корзина | CLAW';
                                     <button type="button" class="add" data-product-id="<?= $cartProduct->id ?>">+</button>
                                 </div>
                             </td>
-                            <td class="product-total-price">
+                            <td class="product-total-price" style="width: 150px !important;">
                                 <span class="price"><?= \common\helpers\CollectorHelper::numFormat($item['sum']) ?> &#8381;</span>
                             </td>
                             <td class="product-action">

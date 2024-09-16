@@ -18,8 +18,8 @@ $this->title = "Ваш заказ №{$uin} принят!";
         <div class="history-content text-center mt-10 mb-10 pb-10">
 
             <div class="section-title-03">
-                <h6 class="sub-title">Мы свяжемся с Вами в ближайшее время!</h6>
-                <h2 class="title">Ваш заказ №<?= $uin ?> принят!</h2>
+                <h6 class="sub-title">Ваша заявка №<?= $uin ?> принята!</h6>
+                <h2 class="title">Мы свяжемся с Вами в ближайшее время!</h2>
             </div>
 
             <div class="checkout-info mt-30">

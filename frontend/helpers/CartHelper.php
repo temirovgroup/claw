@@ -84,6 +84,13 @@ class CartHelper
         ];
     }
 
+    public static function getCartCount()
+    {
+        $cartData = self::getCartData();
+
+        return count($cartData['cartData']);
+    }
+
     /**
      * @param $productId
      * @return bool

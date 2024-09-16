@@ -13,6 +13,8 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
+        'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700;&display=swap',
+
         'front/css/plugins/pe-icon-7-stroke.css',
         'front/css/plugins/animate.min.css',
         'front/css/plugins/swiper-bundle.min.css',
@@ -20,8 +22,11 @@ class AppAsset extends AssetBundle
     ];
     public $js = [
         'front/js/vendor/modernizr-3.11.2.min.js',
+//        'front/js/vendor/jquery-3.5.1.min.js',
+//        'front/js/plugins/bootstrap.min.js',
         'front/js/plugins/swiper-bundle.min.js',
         'front/js/plugins/jquery.zoom.min.js',
+
         'front/js/main.js',
         'front/js/jscript.js',
     ];

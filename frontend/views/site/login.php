@@ -10,32 +10,45 @@ use yii\bootstrap5\ActiveForm;
 $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Please fill out the following fields to login:</p>
+<div class="section section-padding-02 mb-10 pb-10">
+    <div class="container">
 
-    <div class="row">
-        <div class="col-lg-5">
-            <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
+        <!-- History content End -->
+        <div class="history-content text-center mt-10 mb-10 pb-10">
 
-                <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+            <div class="section-title-03">
+                <h6 class="sub-title">Авторизация</h6>
+                <h2 class="title">Введите логин и пароль</h2>
+            </div>
 
-                <?= $form->field($model, 'password')->passwordInput() ?>
+            <div class="checkout-info mt-30">
+                <div class="info-header d-flex flex-wrap justify-content-center">
 
-                <?= $form->field($model, 'rememberMe')->checkbox() ?>
+                    <div class="col-lg-5 cart-form single-form">
+                    <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
 
-                <div class="my-1 mx-0" style="color:#999;">
-                    If you forgot your password you can <?= Html::a('reset it', ['site/request-password-reset']) ?>.
-                    <br>
-                    Need new verification email? <?= Html::a('Resend', ['site/resend-verification-email']) ?>
+                    <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+
+                    <?= $form->field($model, 'password')->passwordInput() ?>
+
+                    <!--<div class="my-1 mx-0" style="color:#999;">
+                        If you forgot your password you can <?php /*= Html::a('reset it', ['site/request-password-reset']) */?>.
+                        <br>
+                        Need new verification email? <?php /*= Html::a('Resend', ['site/resend-verification-email']) */?>
+                    </div>-->
+
+                    <div class="form-group">
+                        <?= Html::submitButton('Войти', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+                    </div>
+
+                    <?php ActiveForm::end(); ?>
                 </div>
-
-                <div class="form-group">
-                    <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
                 </div>
+            </div>
 
-            <?php ActiveForm::end(); ?>
         </div>
+        <!-- History content End -->
+
     </div>
 </div>

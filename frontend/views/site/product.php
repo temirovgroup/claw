@@ -58,6 +58,9 @@
                     <h4 class="product-name"><?= $product->getName() ?></h4>
                     <div class="price">
                         <span class="sale-price"><?= $product->getPrice() ?> &#8381;</span>
+                        <?php if ($product->price < $product->old_price) : ?>
+                            <span class="old-price"><?= $product->getOldPrice() ?> &#8381;</span>
+                        <?php endif; ?>
                     </div>
 
                     <p>

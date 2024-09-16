@@ -26,9 +26,7 @@ $orderSum = array_sum(\yii\helpers\ArrayHelper::getColumn($orderItems, 'sum'));
                 <br>
                 Клиент: <?= $order->getFullName() ?>
                 <br>
-                E-Mail: <a href="mailto:<?= $order->email ?>"><?= $order->email ?></a>
-                <br>
-                Телефон: <a href="tel:+<?= $order->phone ?>"><?= \common\helpers\CollectorHelper::formatPhone($order->phone) ?></a>
+                E-Mail: <a href="mailto:<?= $order->getEmail() ?>"><?= $order->getEmail() ?></a>
                 <br>
             </div>
             <div class="col-sm-6">
